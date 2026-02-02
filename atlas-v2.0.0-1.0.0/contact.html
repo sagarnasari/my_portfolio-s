@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+
+  <title>Contact | Sagar Nasari</title>
+
+  <meta property="og:title" content="Contact | Sagar Nasari" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://yourdomain.com/contact.html" />
+
+  <meta
+    name="description"
+    content="Contact page of Sagar Nasari – DevOps and Cloud Enthusiast"
+  />
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <meta property="og:site_name" content="Sagar Nasari Portfolio" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+  />
+  <link
+    crossorigin="anonymous"
+    href="assets/styles/main.min.css"
+    media="screen"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body x-data="global()" x-init="themeInit()" class="dark:bg-primary">
+<div id="main">
+
+  <!-- Navigation -->
+  <div class="container mx-auto">
+    <div class="flex items-center justify-between py-6 lg:py-10">
+      <a href="./" class="flex items-center">
+        <span class="mr-2">
+          <img src="assets/img/logo.svg" alt="logo" />
+        </span>
+        <p class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
+          Sagar Nasari
+        </p>
+      </a>
+
+      <div class="hidden lg:block">
+        <ul class="flex items-center">
+          <li class="mr-6">
+            <a href="./" class="text-lg text-primary dark:text-white">Home</a>
+          </li>
+          <li class="mr-6">
+            <a href="blog.html" class="text-lg text-primary dark:text-white">Blog</a>
+          </li>
+          <li class="mr-6">
+            <a href="contact.html" class="text-lg text-primary dark:text-white">Contact</a>
+          </li>
+          <li>
+            <i
+              class="bx cursor-pointer text-3xl text-primary dark:text-white"
+              @click="themeSwitch()"
+              :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
+            ></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="container mx-auto">
+    <div class="py-16 lg:py-20">
+      <h1 class="pt-5 font-body text-4xl font-semibold text-primary dark:text-white">
+        Contact Me
+      </h1>
+      <p class="font-body text-xl font-light text-primary dark:text-white">
+        Have a question, project idea, or just want to connect? Feel free to reach out!
+      </p>
+
+      <!-- ✅ Formspree integration -->
+      <form action="https://formspree.io/f/xykpdewq" method="POST" class="pt-16">
+        <div class="flex flex-col sm:flex-row">
+          <div class="w-full sm:mr-3 sm:w-1/2">
+            <label class="block pb-3 font-body font-medium text-primary dark:text-white">
+              Your Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              class="w-full border px-5 py-4"
+              required
+            />
+          </div>
+
+          <div class="w-full pt-6 sm:ml-3 sm:w-1/2 sm:pt-0">
+            <label class="block pb-3 font-body font-medium text-primary dark:text-white">
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="w-full border px-5 py-4"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="w-full pt-6 sm:pt-10">
+          <label class="block pb-3 font-body font-medium text-primary dark:text-white">
+            Message
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="9"
+            placeholder="Write your message here..."
+            class="w-full border px-5 py-4"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="mt-10 bg-secondary px-10 py-4 text-white">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container mx-auto">
+    <div class="flex flex-col items-center justify-between border-t py-10 sm:flex-row">
+      <div class="mr-auto flex flex-col items-center sm:flex-row">
+        <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
+          ©2026 Sagar Nasari • Personal Portfolio
+        </p>
+      </div>
+      <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
+        <a href="https://github.com/sagarnasari" target="_blank">
+          <i class="text-4xl text-primary pl-5 bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/nasari-sagar-3a4881244/" target="_blank">
+          <i class="text-4xl text-primary pl-5 bx bxl-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
