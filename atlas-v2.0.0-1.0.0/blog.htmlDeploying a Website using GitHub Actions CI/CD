@@ -10,7 +10,7 @@
   <meta property="og:title" content="Blog | Sagar Nasari" />
   <meta property="og:locale" content="en_US" />
 
-  <link rel="canonical" href="/blog" />
+  <link rel="canonical" href="blog.html" />
 
   <meta property="og:url" content="/blog" />
 
@@ -80,7 +80,7 @@
         </li>
 
         <li class="mr-6">
-          <a href="blog" class="font-body text-lg text-primary dark:text-white">Blog</a>
+          <a href="blog.html" class="font-body text-lg text-primary dark:text-white">Blog</a>
         </li>
 
         <li class="mr-6">
@@ -133,7 +133,7 @@
           DevOps
         </span>
 
-        <a href="post" class="block font-body text-lg font-semibold text-primary dark:text-white">
+        <a href="post.html" class="block font-body text-lg font-semibold text-primary dark:text-white">
           Deploying a Website using GitHub Actions CI/CD
         </a>
 
@@ -149,7 +149,7 @@
           Learning
         </span>
 
-        <a href="post" class="block font-body text-lg font-semibold text-primary dark:text-white">
+        <a href="post.html" class="block font-body text-lg font-semibold text-primary dark:text-white">
           My Journey Learning Git and GitHub from Scratch
         </a>
 
