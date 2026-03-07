@@ -3,16 +3,20 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./**/*.html"],
   safelist: ["dark"],
-  darkMode: "class", // Use class-based dark mode
+  darkMode: "class",
+
   theme: {
+
     fontFamily: {
       body: ["Poppins", "sans-serif"],
     },
+
     screens: {
       xs: "375px",
       ...defaultTheme.screens,
     },
-    borderWidth: { // Corrected from 'border'
+
+    borderWidth: {
       DEFAULT: "1px",
       0: "0",
       2: "2px",
@@ -20,41 +24,52 @@ module.exports = {
       6: "6px",
       8: "8px",
     },
+
     container: {
       center: true,
       padding: "1rem",
     },
+
     extend: {
+
       colors: {
         primary: "#072344",
         secondary: "#00aaa1",
+
         "green-light": "#cceeec",
         green: "#007c85",
         "green-dark": "#065a68",
+
         "blue-light": "#b3d6f1",
         blue: "#0074d1",
         "blue-dark": "#072344",
+
         black: "#000000",
         white: "#ffffff",
+
         "yellow-lighter": "#f6e8c6",
         "yellow-light": "#f8edd0",
         yellow: "#f4d06f",
         "yellow-dark": "#daa512",
+
         "grey-lightest": "#eff0f3",
         "grey-lighter": "#eceef1",
         "grey-light": "#ccd7e0",
         grey: "#adb6c4",
       },
+
       spacing: {
         13: "3.25rem",
         15: "3.75rem",
         17: "4.25rem",
         18: "4.5rem",
         19: "4.75rem",
+
         76: "19rem",
         84: "21rem",
         88: "22rem",
         92: "23rem",
+
         100: "25rem",
         104: "26rem",
         108: "27rem",
@@ -83,35 +98,45 @@ module.exports = {
         200: "50rem",
         204: "51rem",
       },
+
       inset: {
         50: "50%",
         100: "100%",
       },
+
       zIndex: {
         "-1": "-1",
       },
+
       typography: (theme) => ({
         DEFAULT: {
           css: {
+
             color: theme("colors.primary"),
+
             a: {
               fontWeight: theme("fontWeight.semibold"),
               color: theme("colors.green"),
               textDecoration: "underline",
               transition: "color 300ms",
+
               "&:hover": {
                 color: theme("colors.primary"),
               },
             },
+
             "p, li": {
               fontWeight: theme("fontWeight.light"),
             },
+
             "h1, h2, h3, h4, h5, h6": {
               fontWeight: theme("fontWeight.semibold"),
             },
+
             "ul > li::before": {
               backgroundColor: theme("colors.primary"),
             },
+
             blockquote: {
               borderLeftWidth: "1rem",
               borderColor: theme("colors.green-dark"),
@@ -120,52 +145,48 @@ module.exports = {
               padding: `${theme("spacing.4")} ${theme("spacing.6")}`,
               color: theme("colors.green"),
               fontStyle: "normal",
+
               p: {
                 margin: 0,
                 fontWeight: theme("fontWeight.normal"),
               },
             },
+
           },
         },
+
         dark: {
           css: {
+
             color: theme("colors.white"),
+
             a: {
               color: theme("colors.secondary"),
               "&:hover": {
                 color: theme("colors.green"),
               },
             },
+
             "h1, h2, h3, h4, h5, h6": {
               color: theme("colors.white"),
             },
+
             "ul > li::before": {
               backgroundColor: theme("colors.secondary"),
             },
+
           },
         },
+
       }),
+
     },
+
   },
+
   plugins: [
     require("@tailwindcss/typography")({ modifiers: [] }),
     require("@tailwindcss/forms"),
   ],
+
 };
-module.exports = {
-  content: ["./**/*.html"],
-  theme: {
-    extend: {
-      colors: {
-        "yellow-lighter": "#FFF9C4",
-        "blue-dark": "#1E3A8A",
-        "primary": "#3B82F6",
-      },
-      fontFamily: {
-        body: ["Poppins", "sans-serif"],
-      },
-    },
-  },
-  darkMode: "class",
-  plugins: [],
-}
